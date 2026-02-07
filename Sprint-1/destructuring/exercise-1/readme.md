@@ -30,4 +30,5 @@ console.log(`Batman is ${firstName}, ${lastName}`);
 # Exercise
 
 - What is the syntax to destructure the object `personOne` in exercise.js?
+  let { name, age, favouriteFood } = person;
 - Update the parameter of the function `introduceYourself` to use destructuring on the object that gets passed in.
