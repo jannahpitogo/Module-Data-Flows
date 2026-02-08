@@ -7,4 +7,22 @@ let order = [
   { itemName: "Hash Brown", quantity: 4, unitPricePence: 40 },
 ];
 
-const { itemName, quantity, unitPricePence } = orderItems;
+let bill = `QTY  ITEM                TOTAL\n`;
+let sum = 0;
+
+function logBill(orderList) {
+  orderList.forEach(({ itemName, quantity, unitPricePence }) => {
+    bill +=
+      `${String(quantity).padEnd(5)}` +
+      `${itemName.padEnd(20)}` +
+      `${unitPricePence}\n`;
+  });
+
+  orderList.forEach(({ unitPricePence }) => {
+    sum += unitPricePence;
+  });
+
+  bill += `\nTotal: ${sum}`;
+  console.log(bill);
+}
+logBill(order);
