@@ -70,3 +70,13 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+function findGryffindor(film) {
+  const filterGryffindor = film.filter(({ house }) => house === "Gryffindor");
+
+  filterGryffindor.forEach(({ firstName, lastName }) => {
+    console.log(`${firstName} ${lastName}`);
+  });
+}
+
+findGryffindor(hogwarts);
